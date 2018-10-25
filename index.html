@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">  </script>  
-  </head>
 
-  <body>
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
 
-    <h2>Midpoint location finder</h2>
-    Location1:<br>
-    <input type="text" name="location1" id="location1ID" required>
-    <br>
-    Location2:<br>
-    <input type="text" name="location2" id="location2ID" required>
-    <br><br>
-    <input type="submit" id="submitID">
+<body>
+  <form action="?" method="POST">
+    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+    <br />
+    <input type="submit" value="Submit">
+  </form>
 
-    <!-- ajax text for whenever ajax responses are needed-->
-    <div class="ajaxText"></div>
-  </body>
+  <h2>Midpoint location finder</h2>
+  Location1:<br>
+  <input type="text" name="location1" id="location1ID" required>
+  <br>
+  Location2:<br>
+  <input type="text" name="location2" id="location2ID" required>
+  <br><br>
+  <input type="submit" id="submitID">
 
-  <script>
-    $(document).ready(function()
-    {
-        var location1;
-        var location2;
+  <!-- ajax text for whenever ajax responses are needed-->
+  <div class="ajaxText"></div>
 
-        $("#submitID").click(function()
-        {
-          //ajax stuff but will put in other file specialized for script
-        });
+
+</body>
+
+<script>
+  $(document).ready(function () {
+    var location1;
+    var location2;
+
+    $("#submitID").click(function () {
+      //ajax stuff but will put in other file specialized for script
     });
-  </script>
+  });
+</script>
+
 </html>
